@@ -1,0 +1,6 @@
+Django==3.2.6
+django-rest-framework==3.10.0.1
+django-cors-headers==3.8.0
+django-countries==7.2.1
+django-solo==1.1.5
+django-admin-sortable2==1.0
