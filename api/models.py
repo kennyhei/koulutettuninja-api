@@ -56,6 +56,7 @@ class Contact(models.Model):
     phone = models.CharField(_('Phone'), max_length=16)
     instagram_url = models.URLField()
     facebook_url = models.URLField()
+    google_maps_url = models.URLField(max_length=500)
     booking_url = models.URLField()
 
     class Meta:
