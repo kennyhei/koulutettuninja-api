@@ -49,7 +49,10 @@ class Contact(models.Model):
         null=True,
         on_delete=models.SET_NULL
     )
-    address = models.CharField(_('Address'), max_length=255)
+    company_name = models.CharField(_('Company name'), max_length=255)
+    location_street_address = models.CharField(_('Steet address'), max_length=255)
+    location_postcode = models.CharField(_('Postcode'), max_length=5)
+    location_city = models.CharField(_('City'), max_length=255)
     phone = models.CharField(_('Phone'), max_length=16)
     instagram_url = models.URLField()
     facebook_url = models.URLField()
@@ -65,7 +68,10 @@ class Content(models.Model):
     navbar_title = models.CharField(_('Navbar title'), max_length=255, blank=True, null=True)
     text = models.TextField(_('Text'))
     order = models.PositiveIntegerField(_('Order'), default=0)
-    collapse_long_text = models.BooleanField(default=False)
+    collapse_long_text = models.BooleanField(_('Collapse long text'), default=False)
+    # Hacky but will do and is easier for end-user to toggle
+    # rather than set foreign key to Content in Category model
+    show_pricing = models.BooleanField(_('Show pricing'), default=False)
 
     class Meta:
         ordering = ('order',)

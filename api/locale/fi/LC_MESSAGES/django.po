@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 19:00+0300\n"
+"POT-Creation-Date: 2021-08-31 11:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,70 +18,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models.py:38
+#: models.py:39
 msgid "General settings"
 msgstr "Yleiset asetukset"
 
-#: models.py:41
+#: models.py:42
 msgid "general settings"
 msgstr "yleiset asetukset"
 
-#: models.py:51
-msgid "Address"
-msgstr "Osoite"
-
 #: models.py:52
+msgid "Company name"
+msgstr "Yhtiön nimi"
+
+#: models.py:53
+msgid "Steet address"
+msgstr "Katuosoite"
+
+#: models.py:54
+msgid "Postcode"
+msgstr "Postikoodi"
+
+#: models.py:55
+msgid "City"
+msgstr "Kunta"
+
+#: models.py:56
 msgid "Phone"
 msgstr "Puhelin"
 
-#: models.py:58
+#: models.py:62
 msgid "Contact"
 msgstr "Yhteystiedot"
 
-#: models.py:59
+#: models.py:63
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: models.py:63
+#: models.py:67
 msgid "Title"
 msgstr "Otsikko"
 
-#: models.py:64
+#: models.py:68
 msgid "Navbar title"
 msgstr "Valikon otsikko"
 
-#: models.py:65
+#: models.py:69
 msgid "Text"
 msgstr "Teksti"
 
-#: models.py:66
+#: models.py:70 models.py:83 models.py:106
 msgid "Order"
 msgstr ""
 
 #: models.py:71
+msgid "Collapse long text"
+msgstr "Piiloita osa pitkästä tekstistä"
+
+#: models.py:74
+msgid "Show pricing"
+msgstr "Näytä hinnasto"
+
+#: models.py:81
 msgid "Name"
 msgstr "Nimi"
 
-#: models.py:72
+#: models.py:82
 msgid "Tooltip"
 msgstr ""
 
-#: models.py:78
+#: models.py:89
 msgid "Category"
 msgstr "Kategoria"
 
-#: models.py:79
+#: models.py:90
 msgid "Categories"
 msgstr "Kategoriat"
 
-#: models.py:92
+#: models.py:104
 msgid "Price (€)"
 msgstr "Hinta (€)"
 
-#: models.py:96
+#: models.py:109
 msgid "Service"
 msgstr "Palvelu"
 
-#: models.py:97
+#: models.py:110
 msgid "Services"
 msgstr "Palvelut"
