@@ -84,6 +84,7 @@ class Category(models.Model):
     order = models.PositiveIntegerField(_('Order'), default=0)
 
     def __str__(self):
+        print('lol')
         return self.title
 
     class Meta:
