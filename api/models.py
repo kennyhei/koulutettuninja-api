@@ -73,6 +73,7 @@ class Content(models.Model):
     # Hacky but will do and is easier for end-user to toggle
     # rather than set foreign key to Content in Category model
     show_pricing = models.BooleanField(_('Show pricing'), default=False)
+    show_booking_btn = models.BooleanField(_('Show booking button'), default=False)
 
     class Meta:
         ordering = ('order',)

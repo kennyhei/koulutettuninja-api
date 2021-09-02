@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-31 11:04+0300\n"
+"POT-Creation-Date: 2021-09-02 17:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,62 +46,66 @@ msgstr "Kunta"
 msgid "Phone"
 msgstr "Puhelin"
 
-#: models.py:62
+#: models.py:63
 msgid "Contact"
 msgstr "Yhteystiedot"
 
-#: models.py:63
+#: models.py:64
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: models.py:67
+#: models.py:68
 msgid "Title"
 msgstr "Otsikko"
 
-#: models.py:68
+#: models.py:69
 msgid "Navbar title"
 msgstr "Valikon otsikko"
 
-#: models.py:69
+#: models.py:70
 msgid "Text"
 msgstr "Teksti"
 
-#: models.py:70 models.py:83 models.py:106
+#: models.py:71 models.py:85 models.py:108
 msgid "Order"
 msgstr ""
 
-#: models.py:71
+#: models.py:72
 msgid "Collapse long text"
 msgstr "Piiloita osa pitkästä tekstistä"
 
-#: models.py:74
+#: models.py:75
 msgid "Show pricing"
 msgstr "Näytä hinnasto"
 
-#: models.py:81
+#: models.py:76
+msgid "Show booking button"
+msgstr "Näytä ajanvarausnappi"
+
+#: models.py:83
 msgid "Name"
 msgstr "Nimi"
 
-#: models.py:82
+#: models.py:84
 msgid "Tooltip"
 msgstr ""
 
-#: models.py:89
+#: models.py:91
 msgid "Category"
 msgstr "Kategoria"
 
-#: models.py:90
+#: models.py:92
 msgid "Categories"
 msgstr "Kategoriat"
 
-#: models.py:104
+#: models.py:106
 msgid "Price (€)"
 msgstr "Hinta (€)"
 
-#: models.py:109
+#: models.py:111
 msgid "Service"
 msgstr "Palvelu"
 
-#: models.py:110
+#: models.py:112
 msgid "Services"
 msgstr "Palvelut"
