@@ -1,0 +1,265 @@
+[
+{
+  "model": "api.generalsettings",
+  "pk": 1,
+  "fields": {
+    "header_background_color": "#fff",
+    "header_background_image": "",
+    "header_profile_picture": "header/ninni_resized2.f9d2439/1630425971_70f0d4e8.jpg"
+  }
+},
+{
+  "model": "api.contact",
+  "pk": 1,
+  "fields": {
+    "settings": 1,
+    "company_name": "Hyvän Olon Haltijattaret Oy",
+    "location_street_address": "Jaakkolantie 11",
+    "location_postcode": "04250",
+    "location_city": "Kerava",
+    "phone": "050 323 9499",
+    "instagram_url": "https://instagram.com/koulutettu_ninja",
+    "facebook_url": "https://facebook.com/koulutettu.marttinen",
+    "google_maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1970.8755484485264!2d25.117235251477243!3d60.39773333185429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920089ddb0e7cb%3A0x2bd8798a34cd1bf4!2sJaakkolantie%2011%2C%2004250%20Kerava!5e0!3m2!1sfi!2sfi!4v1614347152089!5m2!1sfi!2sfi",
+    "booking_url": "https://varaa.timma.fi/hyvanolonhaltijattaret"
+  }
+},
+{
+  "model": "api.content",
+  "pk": 1,
+  "fields": {
+    "title": "Moikka! 👋",
+    "navbar_title": "Minusta",
+    "text": "Marttisen Ninja tässä. Tarjoan monipuolisia hierontapalveluja Keravalla, Jaakkolan kaupunginosassa. Löydät minut osoitteesta Jaakkolantie 11, samoista tiloista Hyvän Olon Haltijattaret Oy:n kanssa.\r\n\r\nValmistuin koulutetuksi hierojaksi loppuvuodesta 2017. Hierojaopinnoissa erikoistuin urheilijan lihashuoltoon, joten olen myös urheiluhieroja.\r\n\r\nKlassisen hieronnan ja urheiluhieronnan lisäksi olen suorittanut imukuppihieronta- / kuivakuppauskurssin vuonna 2017. Vuonna 2018 työskentelin kauneushoitolassa, joten sain loistavan tilaisuuden opetella myös kuumakivien käyttöä! Kuumakivihieronta ja suklaaöljyhieronta kuuluvatkin keskeisenä osana palvelutarjontaani.\r\n\r\nVarsinaista hoitofilosofiaa minulla ei ole, mutta työskentelyni keskiössä ovat kosketuksen rentouttava vaikutus, sekä ajatus siitä, että hieronta on asiakkaani omaa aikaa. Kun tulet hierottavakseni, sinulta ei vaadita mitään, vaan pääset rentoutumaan ja nauttimaan omasta ajastasi, vailla kiirettä tai velvollisuuksia.\r\n\r\nTervetuloa hierontaan!",
+    "order": 0,
+    "collapse_long_text": true,
+    "show_pricing": false,
+    "show_booking_btn": false
+  }
+},
+{
+  "model": "api.content",
+  "pk": 2,
+  "fields": {
+    "title": "Hinnasto",
+    "navbar_title": "Hinnasto",
+    "text": "Käytän maskia hieronnan aikana (ja muutenkin asiakkaiden läsnä ollessa), joten hierontaan voi saapua levollisin mielin. Myös tehokas käsien ja työtilan hygieniasta huolehtiminen takaa sen, että tänne on turvallista tulla ja täällä on turvallista olla 😊\r\n\r\nAsiakkaalle maski on vapaavalintainen, mutta suositeltava 👍\r\n\r\n<b>Maksutavat:</b> Hieronnat voit maksaa pankkikortin, yleisimpien luottokorttien ja käteisen lisäksi ePassilla. Huom! ePassin on oltava Hyvinvointipassi.",
+    "order": 1,
+    "collapse_long_text": false,
+    "show_pricing": true,
+    "show_booking_btn": true
+  }
+},
+{
+  "model": "api.category",
+  "pk": 1,
+  "fields": {
+    "title": "Klassinen hieronta",
+    "tooltip": "",
+    "order": 0
+  }
+},
+{
+  "model": "api.category",
+  "pk": 2,
+  "fields": {
+    "title": "Kuumakivihieronta",
+    "tooltip": "<p>Hieronta sisältää rentouttavaa ja lämmittävää laavakivikäsittelyä sekä manuaalista hierontaa.<br><br>Hieronnan yhteydessä käytettävät lämpimät kivet toimivat erinomaisena lämpöhoitona hierottaville alueille, kuten pohkeille, reisille, selälle ja hartioille.</p>",
+    "order": 1
+  }
+},
+{
+  "model": "api.category",
+  "pk": 3,
+  "fields": {
+    "title": "Päähieronta",
+    "tooltip": "Pään, niskan ja hartioiden alueelle kohdistuva hieronta.",
+    "order": 2
+  }
+},
+{
+  "model": "api.category",
+  "pk": 4,
+  "fields": {
+    "title": "Muut hieronnat",
+    "tooltip": "<p>Hierontaa yhdistettynä selän tai raajojen imukuppikäsittelyyn.<br><br>Aluksi lämmitän ihon sivelemällä siihen hierontaöljyä. Tämän jälkeen käsittelen ihoa ja lihaksistoa imukupeilla. Imukupit voivat jäädä hetkeksi paikalleen, tai niitä voidaan liikutella. Imukuppien luoma alipaine nostaa kevyesti ihoa ja sen alaisia kudoksia, virkistäen verenkiertoa ja rentouttaen asiakkaan oloa.</p>",
+    "order": 3
+  }
+},
+{
+  "model": "api.service",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "name": "Klassinen hieronta",
+    "length": 30,
+    "price": "30.00",
+    "order": 1
+  }
+},
+{
+  "model": "api.service",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "name": "Klassinen hieronta",
+    "length": 45,
+    "price": "40.00",
+    "order": 2
+  }
+},
+{
+  "model": "api.service",
+  "pk": 3,
+  "fields": {
+    "category": 1,
+    "name": "Klassinen hieronta",
+    "length": 60,
+    "price": "50.00",
+    "order": 3
+  }
+},
+{
+  "model": "api.service",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "name": "Klassinen hieronta",
+    "length": 90,
+    "price": "65.00",
+    "order": 4
+  }
+},
+{
+  "model": "api.service",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "name": "Hieronta suklaaöljyllä",
+    "length": 30,
+    "price": "35.00",
+    "order": 5
+  }
+},
+{
+  "model": "api.service",
+  "pk": 6,
+  "fields": {
+    "category": 1,
+    "name": "Hieronta suklaaöljyllä",
+    "length": 45,
+    "price": "45.00",
+    "order": 6
+  }
+},
+{
+  "model": "api.service",
+  "pk": 7,
+  "fields": {
+    "category": 1,
+    "name": "Hieronta suklaaöljyllä",
+    "length": 60,
+    "price": "55.00",
+    "order": 7
+  }
+},
+{
+  "model": "api.service",
+  "pk": 8,
+  "fields": {
+    "category": 2,
+    "name": "Hieronta lämpöhoidolla",
+    "length": 30,
+    "price": "38.00",
+    "order": 1
+  }
+},
+{
+  "model": "api.service",
+  "pk": 9,
+  "fields": {
+    "category": 2,
+    "name": "Hieronta lämpöhoidolla",
+    "length": 45,
+    "price": "47.00",
+    "order": 2
+  }
+},
+{
+  "model": "api.service",
+  "pk": 10,
+  "fields": {
+    "category": 2,
+    "name": "Hieronta lämpöhoidolla",
+    "length": 60,
+    "price": "58.00",
+    "order": 3
+  }
+},
+{
+  "model": "api.service",
+  "pk": 11,
+  "fields": {
+    "category": 2,
+    "name": "Hieronta lämpöhoidolla",
+    "length": 75,
+    "price": "65.00",
+    "order": 4
+  }
+},
+{
+  "model": "api.service",
+  "pk": 12,
+  "fields": {
+    "category": 2,
+    "name": "Hieronta lämpöhoidolla",
+    "length": 90,
+    "price": "72.00",
+    "order": 5
+  }
+},
+{
+  "model": "api.service",
+  "pk": 13,
+  "fields": {
+    "category": 3,
+    "name": "Pään alueen hieronta",
+    "length": 30,
+    "price": "30.00",
+    "order": 1
+  }
+},
+{
+  "model": "api.service",
+  "pk": 14,
+  "fields": {
+    "category": 3,
+    "name": "Pään alueen hieronta",
+    "length": 45,
+    "price": "40.00",
+    "order": 2
+  }
+},
+{
+  "model": "api.service",
+  "pk": 15,
+  "fields": {
+    "category": 4,
+    "name": "Imukuppihieronta",
+    "length": 30,
+    "price": "35.00",
+    "order": 1
+  }
+},
+{
+  "model": "api.service",
+  "pk": 16,
+  "fields": {
+    "category": 4,
+    "name": "Imukuppihieronta",
+    "length": 45,
+    "price": "45.00",
+    "order": 2
+  }
+}
+]

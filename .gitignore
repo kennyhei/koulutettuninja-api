@@ -1,6 +1,5 @@
 venv/
 db.sqlite3
-api/fixtures/
 app/staticfiles/
 .vscode/
 media/
