@@ -1,11 +1,17 @@
+import os
+import sys
 import time
 import uuid
 
+from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import ugettext
+from io import BytesIO
 from solo.models import SingletonModel
 from os.path import splitext
+
+from PIL import Image
 
 
 def profile_picture_directory_path(instance, filename):
@@ -40,6 +46,28 @@ class GeneralSettings(SingletonModel):
 
     class Meta:
         verbose_name = _('general settings')
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        # Resize uploaded profile picture
+        if self.header_profile_picture:
+            if os.path.exists(self.header_profile_picture.path):
+                image = Image.open(self.header_profile_picture)
+                output_io_stream = BytesIO()
+                base_height = 220
+                hpercent = base_height / image.size[1]
+                wsize = int(image.size[0] * hpercent)
+                image_temporary_resized = image.resize((wsize, base_height))
+                image_temporary_resized.save(output_io_stream, format='JPEG')
+                output_io_stream.seek(0)
+                self.header_profile_picture = InMemoryUploadedFile(
+                    output_io_stream,
+                    'ImageField',
+                    '{}.jpeg'.format(self.header_profile_picture.name.split('.')[0]),
+                    'image/jpeg',
+                    sys.getsizeof(output_io_stream), None
+                )
+        super().save(*args, **kwargs)
 
 
 class Contact(models.Model):
