@@ -53,10 +53,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    'adminsortable2',
     'corsheaders',
     'django_countries',
-    'adminsortable2',
+    'django_q',
+    'rest_framework',
     'solo',
     'api'
 ]
@@ -121,6 +122,22 @@ DATABASES = {
     'default': get_database_config()
 }
 
+# POST request to this URL triggers
+# a deploy hook in front app
+FRONT_APP_DEPLOY_URL = get_env('FRONT_APP_DEPLOY_URL')
+
+# QCluster
+INT32_MAX = 2147483647
+Q_CLUSTER = {
+    'name': 'DjangORM',
+    'timeout': 55 * 60,
+    'retry': INT32_MAX,  # effectively disable retry
+    'save_limit': 10000,
+    'queue_limit': 50,
+    'recycle': 20,
+    'bulk': 100,
+    'orm': 'default'
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

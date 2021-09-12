@@ -1,12 +1,37 @@
+from datetime import timedelta
 from django.contrib import admin
+from django.utils import timezone
+from django_q.models import Schedule
+from django_q.tasks import schedule
 from adminsortable2.admin import SortableAdminMixin
 from adminsortable2.admin import SortableInlineAdminMixin
 from solo.admin import SingletonModelAdmin
 from api import models
 
 
+class ModelUpdateDeployMixin:
+
+    def _schedule_deploy(self):
+        if Schedule.objects.exists():
+            return
+        schedule(
+            'api.tasks.task_deploy_front',
+            name='front_deploy',
+            schedule_type=Schedule.ONCE,
+            next_run=timezone.now() + timedelta(minutes=10)
+        )
+
+    def delete_model(self, request, obj):
+        super().delete_model(request, obj)
+        self._schedule_deploy()
+
+    def save_model(self, request, obj, form, change):
+        super().save_model(request, obj, form, change)
+        self._schedule_deploy()
+
+
 @admin.register(models.GeneralSettings)
-class GeneralSettingsAdmin(SingletonModelAdmin):
+class GeneralSettingsAdmin(ModelUpdateDeployMixin, SingletonModelAdmin):
 
     class ContactInline(admin.StackedInline):
         model = models.Contact
@@ -17,7 +42,7 @@ class GeneralSettingsAdmin(SingletonModelAdmin):
 
 
 @admin.register(models.Content)
-class ContentAdmin(SortableAdminMixin, admin.ModelAdmin):
+class ContentAdmin(ModelUpdateDeployMixin, SortableAdminMixin, admin.ModelAdmin):
     list_display = (
         'order',
         'title',
@@ -36,7 +61,7 @@ class ContentAdmin(SortableAdminMixin, admin.ModelAdmin):
 
 
 @admin.register(models.Category)
-class CategoryAdmin(SortableAdminMixin, admin.ModelAdmin):
+class CategoryAdmin(ModelUpdateDeployMixin, SortableAdminMixin, admin.ModelAdmin):
     list_display = (
         'title',
     )
@@ -50,7 +75,7 @@ class CategoryAdmin(SortableAdminMixin, admin.ModelAdmin):
 
 
 @admin.register(models.Service)
-class ServiceAdmin(SortableAdminMixin, admin.ModelAdmin):
+class ServiceAdmin(ModelUpdateDeployMixin, SortableAdminMixin, admin.ModelAdmin):
     list_display = (
         'name',
         'category',
@@ -60,16 +85,3 @@ class ServiceAdmin(SortableAdminMixin, admin.ModelAdmin):
 
     def get_queryset(self, request):
         return super().get_queryset(request).select_related('category')
-
-
-'''
-@admin.register(models.Contact)
-class ContactAdmin(admin.ModelAdmin):
-    list_display = (
-        'address',
-        'phone',
-        'instagram_url',
-        'facebook_url',
-        'booking_url',
-    )
-'''
