@@ -1,6 +1,6 @@
 # koulutettuninja-api
 
-#### Setup:
+### Setup
 
 ```
 python3 -m venv venv
@@ -13,7 +13,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-#### Always-on task
+### Always-on task
 
 Create file `qcluster.sh` with content:
 
