@@ -77,15 +77,15 @@ class Contact(models.Model):
         null=True,
         on_delete=models.SET_NULL
     )
-    company_name = models.CharField(_('Company name'), max_length=255)
-    location_street_address = models.CharField(_('Steet address'), max_length=255)
-    location_postcode = models.CharField(_('Postcode'), max_length=5)
+    company_name = models.CharField(_('Company name'), blank=True, max_length=255)
+    location_street_address = models.CharField(_('Steet address'), blank=True, max_length=255)
+    location_postcode = models.CharField(_('Postcode'), blank=True, max_length=5)
     location_city = models.CharField(_('City'), max_length=255)
     phone = models.CharField(_('Phone'), max_length=16)
-    instagram_url = models.URLField()
-    facebook_url = models.URLField()
-    google_maps_url = models.URLField(max_length=500)
-    booking_url = models.URLField()
+    instagram_url = models.URLField(blank=True, null=True)
+    facebook_url = models.URLField(blank=True, null=True)
+    google_maps_url = models.URLField(max_length=500, blank=True, null=True)
+    booking_url = models.URLField(blank=True, null=True)
 
     class Meta:
         verbose_name = _('Contact')
