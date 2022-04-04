@@ -81,7 +81,7 @@ class Contact(models.Model):
     location_street_address = models.CharField(_('Steet address'), blank=True, max_length=255)
     location_postcode = models.CharField(_('Postcode'), blank=True, max_length=5)
     location_city = models.CharField(_('City'), max_length=255)
-    phone = models.CharField(_('Phone'), max_length=16)
+    phone = models.CharField(_('Phone'), max_length=16, blank=True, null=True)
     instagram_url = models.URLField(blank=True, null=True)
     facebook_url = models.URLField(blank=True, null=True)
     google_maps_url = models.URLField(max_length=500, blank=True, null=True)
@@ -102,6 +102,7 @@ class Content(models.Model):
     # rather than set foreign key to Content in Category model
     show_pricing = models.BooleanField(_('Show pricing'), default=False)
     show_booking_btn = models.BooleanField(_('Show booking button'), default=False)
+    hide_content = models.BooleanField(_('Hide content'), default=False)
 
     class Meta:
         ordering = ('order',)
