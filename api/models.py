@@ -102,6 +102,7 @@ class Content(models.Model):
     # rather than set foreign key to Content in Category model
     show_pricing = models.BooleanField(_('Show pricing'), default=False)
     show_booking_btn = models.BooleanField(_('Show booking button'), default=False)
+    show_in_navbar = models.BooleanField(_('Show in navbar'), default=True)
     hide_content = models.BooleanField(_('Hide content'), default=False)
 
     class Meta:
