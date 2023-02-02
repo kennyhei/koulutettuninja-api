@@ -3,9 +3,9 @@
   "model": "api.generalsettings",
   "pk": 1,
   "fields": {
-    "header_background_color": "#fff",
+    "header_background_color": "#000",
     "header_background_image": "",
-    "header_profile_picture": "header/ninni_resized2.f9d2439/1630425971_70f0d4e8.jpg"
+    "header_profile_picture": "header/1667923882_48d62492/1675344971_fc5daacf.jpeg"
   }
 },
 {
@@ -13,15 +13,15 @@
   "pk": 1,
   "fields": {
     "settings": 1,
-    "company_name": "Hyvän Olon Haltijattaret Oy",
-    "location_street_address": "Jaakkolantie 11",
-    "location_postcode": "04250",
-    "location_city": "Kerava",
-    "phone": "050 323 9499",
-    "instagram_url": "https://instagram.com/koulutettu_ninja",
-    "facebook_url": "https://facebook.com/koulutettu.marttinen",
-    "google_maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1970.8755484485264!2d25.117235251477243!3d60.39773333185429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920089ddb0e7cb%3A0x2bd8798a34cd1bf4!2sJaakkolantie%2011%2C%2004250%20Kerava!5e0!3m2!1sfi!2sfi!4v1614347152089!5m2!1sfi!2sfi",
-    "booking_url": "https://varaa.timma.fi/hyvanolonhaltijattaret"
+    "company_name": "Studio AK Kuokkala",
+    "location_street_address": "Polttolinja 1",
+    "location_postcode": "40520",
+    "location_city": "Jyväskylä",
+    "phone": "020 776 9555",
+    "instagram_url": "https://instagram.com/studioak.ninja",
+    "facebook_url": null,
+    "google_maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1859.031974468447!2d25.769150116283647!3d62.22866568276544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468574073f102037%3A0x33ed0a00111df709!2sPolttolinja%201%2C%2040520%20Jyv%C3%A4skyl%C3%A4!5e0!3m2!1sfi!2sfi!4v1675344879500!5m2!1sfi!2sfi",
+    "booking_url": "https://www.studioak.fi/ajanvaraus-24-h/"
   }
 },
 {
@@ -30,11 +30,13 @@
   "fields": {
     "title": "Moikka! 👋",
     "navbar_title": "Minusta",
-    "text": "Marttisen Ninja tässä. Tarjoan monipuolisia hierontapalveluja Keravalla, Jaakkolan kaupunginosassa. Löydät minut osoitteesta Jaakkolantie 11, samoista tiloista Hyvän Olon Haltijattaret Oy:n kanssa.\r\n\r\nValmistuin koulutetuksi hierojaksi loppuvuodesta 2017. Hierojaopinnoissa erikoistuin urheilijan lihashuoltoon, joten olen myös urheiluhieroja.\r\n\r\nKlassisen hieronnan ja urheiluhieronnan lisäksi olen suorittanut imukuppihieronta- / kuivakuppauskurssin vuonna 2017. Vuonna 2018 työskentelin kauneushoitolassa, joten sain loistavan tilaisuuden opetella myös kuumakivien käyttöä! Kuumakivihieronta ja suklaaöljyhieronta kuuluvatkin keskeisenä osana palvelutarjontaani.\r\n\r\nVarsinaista hoitofilosofiaa minulla ei ole, mutta työskentelyni keskiössä ovat kosketuksen rentouttava vaikutus, sekä ajatus siitä, että hieronta on asiakkaani omaa aikaa. Kun tulet hierottavakseni, sinulta ei vaadita mitään, vaan pääset rentoutumaan ja nauttimaan omasta ajastasi, vailla kiirettä tai velvollisuuksia.\r\n\r\nTervetuloa hierontaan!",
+    "text": "Marttisen Ninja tässä. Tarjoan monipuolisia hierontapalveluja Jyväskylässä, Kuokkalan kaupunginosassa. Löydät minut osoitteesta Polttolinja 1, samoista tiloista Studio AK Kuokkalan kanssa.\r\n\r\nValmistuin koulutetuksi hierojaksi loppuvuodesta 2017. Hierojaopinnoissa erikoistuin urheilijan lihashuoltoon, joten olen myös urheiluhieroja.\r\n\r\nKlassisen hieronnan ja urheiluhieronnan lisäksi olen suorittanut imukuppihieronta- / kuivakuppauskurssin vuonna 2017. Vuonna 2018 työskentelin kauneushoitolassa, joten sain loistavan tilaisuuden opetella myös kuumakivien käyttöä! Kuumakivihieronta ja suklaaöljyhieronta kuuluvatkin keskeisenä osana palvelutarjontaani.\r\n\r\nVarsinaista hoitofilosofiaa minulla ei ole, mutta työskentelyni keskiössä ovat kosketuksen rentouttava vaikutus, sekä ajatus siitä, että hieronta on asiakkaani omaa aikaa. Kun tulet hierottavakseni, sinulta ei vaadita mitään, vaan pääset rentoutumaan ja nauttimaan omasta ajastasi, vailla kiirettä tai velvollisuuksia.\r\n\r\nTervetuloa hierontaan!",
     "order": 0,
     "collapse_long_text": true,
     "show_pricing": false,
-    "show_booking_btn": false
+    "show_booking_btn": false,
+    "show_in_navbar": true,
+    "hide_content": false
   }
 },
 {
@@ -47,7 +49,9 @@
     "order": 1,
     "collapse_long_text": false,
     "show_pricing": true,
-    "show_booking_btn": true
+    "show_booking_btn": true,
+    "show_in_navbar": true,
+    "hide_content": false
   }
 },
 {

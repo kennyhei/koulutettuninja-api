@@ -72,7 +72,7 @@ msgstr ""
 
 #: models.py:100
 msgid "Collapse long text"
-msgstr "Piiloita osa pitkästä tekstistä"
+msgstr "Piilota osa pitkästä tekstistä"
 
 #: models.py:103
 msgid "Show pricing"
