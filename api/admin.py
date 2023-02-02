@@ -4,7 +4,7 @@ from django.utils import timezone
 from django_q.models import Schedule
 from django_q.tasks import schedule
 from adminsortable2.admin import SortableAdminMixin
-from adminsortable2.admin import SortableInlineAdminMixin
+from adminsortable2.admin import SortableTabularInline
 from solo.admin import SingletonModelAdmin
 from api import models
 
@@ -66,7 +66,7 @@ class CategoryAdmin(ModelUpdateDeployMixin, SortableAdminMixin, admin.ModelAdmin
         'title',
     )
 
-    class ServiceInline(SortableInlineAdminMixin, admin.TabularInline):
+    class ServiceInline(SortableTabularInline):
         model = models.Service
 
     inlines = (
@@ -75,7 +75,7 @@ class CategoryAdmin(ModelUpdateDeployMixin, SortableAdminMixin, admin.ModelAdmin
 
 
 @admin.register(models.Service)
-class ServiceAdmin(ModelUpdateDeployMixin, SortableAdminMixin, admin.ModelAdmin):
+class ServiceAdmin(ModelUpdateDeployMixin, admin.ModelAdmin):
     list_display = (
         'name',
         'category',

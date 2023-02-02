@@ -6,7 +6,6 @@ import uuid
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django.utils.translation import ugettext
 from io import BytesIO
 from solo.models import SingletonModel
 from os.path import splitext
@@ -42,7 +41,7 @@ class GeneralSettings(SingletonModel):
     )
 
     def __str__(self):
-        return ugettext('General settings')
+        return str(_('General settings'))
 
     class Meta:
         verbose_name = _('general settings')
