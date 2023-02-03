@@ -64,6 +64,7 @@ class ContentAdmin(ModelUpdateDeployMixin, SortableAdminMixin, admin.ModelAdmin)
 class CategoryAdmin(ModelUpdateDeployMixin, SortableAdminMixin, admin.ModelAdmin):
     list_display = (
         'title',
+        'deleted_at',
     )
 
     class ServiceInline(SortableTabularInline):

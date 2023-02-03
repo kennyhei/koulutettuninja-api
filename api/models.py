@@ -57,13 +57,13 @@ class GeneralSettings(SingletonModel):
                 hpercent = base_height / image.size[1]
                 wsize = int(image.size[0] * hpercent)
                 image_temporary_resized = image.resize((wsize, base_height))
-                image_temporary_resized.save(output_io_stream, format='JPEG')
+                image_temporary_resized.save(output_io_stream, format='WEBP')
                 output_io_stream.seek(0)
                 self.header_profile_picture = InMemoryUploadedFile(
                     output_io_stream,
                     'ImageField',
-                    '{}.jpeg'.format(self.header_profile_picture.name.split('.')[0]),
-                    'image/jpeg',
+                    '{}.webp'.format(self.header_profile_picture.name.split('.')[0]),
+                    'image/webp',
                     sys.getsizeof(output_io_stream), None
                 )
         super().save(*args, **kwargs)
@@ -112,6 +112,8 @@ class Category(models.Model):
     title = models.CharField(_('Name'), max_length=255)
     tooltip = models.TextField(_('Tooltip'), blank=True, null=True)
     order = models.PositiveIntegerField(_('Order'), default=0)
+    # For hiding services
+    deleted_at = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return self.title

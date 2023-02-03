@@ -20,7 +20,7 @@ class ContentViewSet(viewsets.ModelViewSet):
 
 class CategoryViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.CategorySerializer
-    queryset = models.Category.objects.all()
+    queryset = models.Category.objects.filter(deleted_at__isnull=True).all()
 
 
 class ServiceViewSet(viewsets.ModelViewSet):
