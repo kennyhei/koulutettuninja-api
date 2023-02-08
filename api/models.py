@@ -53,7 +53,7 @@ class GeneralSettings(SingletonModel):
             if os.path.exists(self.header_profile_picture.path):
                 image = Image.open(self.header_profile_picture)
                 output_io_stream = BytesIO()
-                base_height = 220
+                base_height = 440
                 hpercent = base_height / image.size[1]
                 wsize = int(image.size[0] * hpercent)
                 image_temporary_resized = image.resize((wsize, base_height))
@@ -63,6 +63,20 @@ class GeneralSettings(SingletonModel):
                     output_io_stream,
                     'ImageField',
                     '{}.webp'.format(self.header_profile_picture.name.split('.')[0]),
+                    'image/webp',
+                    sys.getsizeof(output_io_stream), None
+                )
+        if self.header_background_image:
+            if os.path.exists(self.header_background_image.path):
+                image = Image.open(self.header_background_image)
+                output_io_stream = BytesIO()
+                image_temporary_webp = image.copy()
+                image_temporary_webp.save(output_io_stream, format='WEBP')
+                output_io_stream.seek(0)
+                self.header_background_image = InMemoryUploadedFile(
+                    output_io_stream,
+                    'ImageField',
+                    '{}.webp'.format(self.header_background_image.name.split('.')[0]),
                     'image/webp',
                     sys.getsizeof(output_io_stream), None
                 )
