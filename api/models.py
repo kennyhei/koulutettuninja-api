@@ -22,9 +22,7 @@ def profile_picture_directory_path(instance, filename):
 
 def image_directory_path(instance, filename):
     name, extension = splitext(filename)
-    return 'header/{0}/{1}_{2}{3}'.format(
-        name, str(int(time.time())), str(uuid.uuid4())[:8], extension
-    )
+    return '{0}{1}'.format(name, extension)
 
 
 class GeneralSettings(SingletonModel):
