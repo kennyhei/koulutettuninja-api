@@ -6,6 +6,15 @@
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
+
+Create `.env` with:
+```
+SECRET_KEY=WRITE_SOME_SECRET_STR_HERE
+```
+
+Continue with:
+```
 python manage.py migrate
 python manage.py collectstatic
 python manage.py loaddata api/fixtures/data.json
