@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-03 19:25+0000\n"
+"POT-Creation-Date: 2024-06-03 19:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgstr "Yhteystiedot"
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: api/models.py:107 api/models.py:114
+#: api/models.py:107 api/models.py:118
 msgid "Text"
 msgstr "Teksti"
 
@@ -62,62 +62,70 @@ msgstr "Teksti"
 msgid "Show notification"
 msgstr "Näytä ilmoitus"
 
+#: api/models.py:111
+msgid "Notification"
+msgstr "Ilmoitus"
+
 #: api/models.py:112
+msgid "Notifications"
+msgstr "Ilmoitukset"
+
+#: api/models.py:116
 msgid "Title"
 msgstr "Otsikko"
 
-#: api/models.py:113
+#: api/models.py:117
 msgid "Navbar title"
 msgstr "Valikon otsikko"
 
-#: api/models.py:115 api/models.py:131 api/models.py:156
+#: api/models.py:119 api/models.py:135 api/models.py:160
 msgid "Order"
 msgstr ""
 
-#: api/models.py:116
+#: api/models.py:120
 msgid "Collapse long text"
 msgstr "Piilota osa pitkästä tekstistä"
 
-#: api/models.py:119
+#: api/models.py:123
 msgid "Show pricing"
 msgstr "Näytä hinnasto"
 
-#: api/models.py:120
+#: api/models.py:124
 msgid "Show booking button"
 msgstr "Näytä ajanvarausnappi"
 
-#: api/models.py:121
+#: api/models.py:125
 msgid "Show in navbar"
 msgstr "Näytä ylävalikossa"
 
-#: api/models.py:122
+#: api/models.py:126
 msgid "Hide content"
 msgstr "Piilota"
 
-#: api/models.py:129
+#: api/models.py:133
 msgid "Name"
 msgstr "Nimi"
 
-#: api/models.py:130
+#: api/models.py:134
 msgid "Tooltip"
 msgstr ""
 
-#: api/models.py:139
+#: api/models.py:143
 msgid "Category"
 msgstr "Kategoria"
 
-#: api/models.py:140
+#: api/models.py:144
 msgid "Categories"
 msgstr "Kategoriat"
 
-#: api/models.py:154
+#: api/models.py:158
 msgid "Price (€)"
 msgstr "Hinta (€)"
 
-#: api/models.py:159
+#: api/models.py:163
 msgid "Service"
 msgstr "Palvelu"
 
-#: api/models.py:160
+#: api/models.py:164
 msgid "Services"
 msgstr "Palvelut"

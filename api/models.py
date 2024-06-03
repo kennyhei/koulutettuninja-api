@@ -107,6 +107,10 @@ class Notification(models.Model):
     text = models.TextField(_('Text'))
     show_notification = models.BooleanField(_('Show notification'), default=False)
 
+    class Meta:
+        verbose_name = _('Notification')
+        verbose_name_plural = _('Notifications')
+
 
 class Content(models.Model):
     title = models.CharField(_('Title'), max_length=255)
