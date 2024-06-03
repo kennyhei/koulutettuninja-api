@@ -13,6 +13,11 @@ class ContactViewSet(viewsets.ModelViewSet):
     queryset = models.Contact.objects.all()
 
 
+class NotificationViewSet(viewsets.ModelViewSet):
+    serializer_class = serializers.NotificationSerializer
+    queryset = models.Notification.objects.all()
+
+
 class ContentViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.ContentSerializer
     queryset = models.Content.objects.all()

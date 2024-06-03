@@ -103,6 +103,11 @@ class Contact(models.Model):
         verbose_name_plural = _('Contacts')
 
 
+class Notification(models.Model):
+    text = models.TextField(_('Text'))
+    show_notification = models.BooleanField(_('Show notification'), default=False)
+
+
 class Content(models.Model):
     title = models.CharField(_('Title'), max_length=255)
     navbar_title = models.CharField(_('Navbar title'), max_length=255, blank=True, null=True)

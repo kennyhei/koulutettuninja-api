@@ -41,6 +41,20 @@ class GeneralSettingsAdmin(ModelUpdateDeployMixin, SingletonModelAdmin):
     )
 
 
+@admin.register(models.Notification)
+class NotificationAdmin(ModelUpdateDeployMixin, SingletonModelAdmin):
+    list_display = (
+        '_text',
+        'show_notification',
+    )
+
+    def _text(self, obj):
+        text = obj.text
+        if not text:
+            return None
+        return text[:220] + '...'
+
+
 @admin.register(models.Content)
 class ContentAdmin(ModelUpdateDeployMixin, SortableAdminMixin, admin.ModelAdmin):
     list_display = (

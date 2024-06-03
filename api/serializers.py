@@ -18,6 +18,13 @@ class GeneralSettingsSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class NotificationSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.Notification
+        fields = '__all__'
+
+
 class ContentSerializer(serializers.ModelSerializer):
 
     class Meta:

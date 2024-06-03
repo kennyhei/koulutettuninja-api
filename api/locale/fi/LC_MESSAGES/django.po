@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-04 21:12+0300\n"
+"POT-Creation-Date: 2024-06-03 19:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,102 +18,106 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: models.py:45
+#: api/models.py:42
 msgid "General settings"
 msgstr "Yleiset asetukset"
 
-#: models.py:48
+#: api/models.py:45
 msgid "general settings"
 msgstr "yleiset asetukset"
 
-#: models.py:80
+#: api/models.py:91
 msgid "Company name"
 msgstr "Yhtiön nimi"
 
-#: models.py:81
+#: api/models.py:92
 msgid "Steet address"
 msgstr "Katuosoite"
 
-#: models.py:82
+#: api/models.py:93
 msgid "Postcode"
 msgstr "Postikoodi"
 
-#: models.py:83
+#: api/models.py:94
 msgid "City"
 msgstr "Kunta"
 
-#: models.py:84
+#: api/models.py:95
 msgid "Phone"
 msgstr "Puhelin"
 
-#: models.py:91
+#: api/models.py:102
 msgid "Contact"
 msgstr "Yhteystiedot"
 
-#: models.py:92
+#: api/models.py:103
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: models.py:96
-msgid "Title"
-msgstr "Otsikko"
-
-#: models.py:97
-msgid "Navbar title"
-msgstr "Valikon otsikko"
-
-#: models.py:98
+#: api/models.py:107 api/models.py:114
 msgid "Text"
 msgstr "Teksti"
 
-#: models.py:99 models.py:115 models.py:138
+#: api/models.py:108
+msgid "Show notification"
+msgstr "Näytä ilmoitus"
+
+#: api/models.py:112
+msgid "Title"
+msgstr "Otsikko"
+
+#: api/models.py:113
+msgid "Navbar title"
+msgstr "Valikon otsikko"
+
+#: api/models.py:115 api/models.py:131 api/models.py:156
 msgid "Order"
 msgstr ""
 
-#: models.py:100
+#: api/models.py:116
 msgid "Collapse long text"
 msgstr "Piilota osa pitkästä tekstistä"
 
-#: models.py:103
+#: api/models.py:119
 msgid "Show pricing"
 msgstr "Näytä hinnasto"
 
-#: models.py:104
+#: api/models.py:120
 msgid "Show booking button"
 msgstr "Näytä ajanvarausnappi"
 
-#: models.py:105
+#: api/models.py:121
 msgid "Show in navbar"
 msgstr "Näytä ylävalikossa"
 
-#: models.py:106
+#: api/models.py:122
 msgid "Hide content"
 msgstr "Piilota"
 
-#: models.py:113
+#: api/models.py:129
 msgid "Name"
 msgstr "Nimi"
 
-#: models.py:114
+#: api/models.py:130
 msgid "Tooltip"
 msgstr ""
 
-#: models.py:121
+#: api/models.py:139
 msgid "Category"
 msgstr "Kategoria"
 
-#: models.py:122
+#: api/models.py:140
 msgid "Categories"
 msgstr "Kategoriat"
 
-#: models.py:136
+#: api/models.py:154
 msgid "Price (€)"
 msgstr "Hinta (€)"
 
-#: models.py:141
+#: api/models.py:159
 msgid "Service"
 msgstr "Palvelu"
 
-#: models.py:142
+#: api/models.py:160
 msgid "Services"
 msgstr "Palvelut"
